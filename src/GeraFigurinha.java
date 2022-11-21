@@ -32,11 +32,17 @@ public class GeraFigurinha {
     graphics.drawImage(imagemOriginal, 0, 0, null);
 
     //configurar fonte
-    var fonte = new Font(Font.SANS_SERIF,Font.BOLD, 64);
+    var fonte = new Font("Comic Sans MS",Font.BOLD, 64);
     graphics.setColor(Color.ORANGE);
     graphics.setFont(fonte);
+    
+    // Centralizando texto
+    
+    	int textolargura =graphics.getFontMetrics().stringWidth("TOPZERA");
+    	int pos = (width/2) -(textolargura/2);
+    
     //escrever uma frase na nova imagem
-    graphics.drawString("TOPZERA", 150, novaAltura-100);
+    graphics.drawString("TOPZERA", pos, novaAltura-100);
 
     //escrever a nova imagem em um arquivo
     ImageIO.write(novaImagem, "png", new File(nomeArquivo));

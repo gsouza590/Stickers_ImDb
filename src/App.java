@@ -6,6 +6,7 @@ import java.util.List;
 import imdb_stickers.entities.Conteudo;
 import imdb_stickers.services.ClientHttp;
 import utils.ExtratorDeConteudo;
+import utils.ExtratorDeConteudoImdb;
 import utils.ExtratorDeConteudoNasa;
 
 public class App {
@@ -14,13 +15,13 @@ public class App {
 
 		// fazer uma conexao http e top 250 filmes
 
-		// String url = "https://imdb-api.com/en/API/Top250Movies/k_mw5cq3j3";
+		 String url = "https://imdb-api.com/en/API/Top250Movies/k_mw5cq3j3";
 		// String top250series = "https://imdb-api.com/en/API/Top250TVs/k_mw5cq3j3";
 		// String popularSeries =
 		// "https://imdb-api.com/en/API/MostPopularTVs/k_mw5cq3j3";
 
-		String url = "https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY&start_date=2022-06-12&end_date=2022-06-14";
-		ExtratorDeConteudo extrator = new ExtratorDeConteudoNasa();
+//		String url = "https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY&start_date=2022-06-12&end_date=2022-06-14";
+		ExtratorDeConteudo extrator = new ExtratorDeConteudoImdb();
 
 		var http = new ClientHttp();
 		String json = http.buscaDados(url);
