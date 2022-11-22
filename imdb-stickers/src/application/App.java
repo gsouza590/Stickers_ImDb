@@ -1,4 +1,4 @@
-package Main;
+package application;
 
 import java.io.InputStream;
 import java.net.URL;
